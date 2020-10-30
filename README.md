@@ -1,2 +1,2 @@
-# DZtools
-Python-based data visualization and interpretation tools for detrital zircon geochronology data
+s# DZtools
+Python-based data visualization and interpretation components for detrital zircon geochronology data
