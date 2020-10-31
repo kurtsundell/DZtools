@@ -2,10 +2,8 @@ import sys
 #import argparse
 
 import pandas as pd
-import matplotlib.pyplot as plt
-
 from dztools.stats.intersample import intersample
-from dztools.utils.makeplots import makeplots
+from dztools.makeplots import makeplots
 
 xmin = 1 # define lower limit for probability density plots (PDPs) and kernel density estimates (KDEs) and all plots
 xmax = 4000 #upper limit for PDPs and KDEs and all plots
@@ -26,7 +24,6 @@ def DZ_main(filename):
 
     if PlotDistributions == 1:
         fig, axs = makeplots(df, xmin, xmax, xint)
-        plt.show()
 
 
 if __name__ == '__main__':
