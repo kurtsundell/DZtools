@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
-from measures import KSTest, KuiperTest, SimilarityTest, LikenessTest, CrossCorrelationTest
-from distributions import pdp
+from .measures import KSTest, KuiperTest, SimilarityTest, LikenessTest, CrossCorrelationTest
+from .distributions import pdp
 
 def intersample(df,xmin,xmax,xint):
     x = np.arange(xmin,xmax+1,xint) # define discretized x axis
@@ -41,4 +41,10 @@ def intersample(df,xmin,xmax,xint):
             Similarity[i,j] = SimilarityTest(PDPs[:,i],PDPs[:,j])
             Likeness[i,j] = LikenessTest(PDPs[:,i],PDPs[:,j])
             CrossCorrelation[i,j] = CrossCorrelationTest(PDPs[:,i],PDPs[:,j])
-    return(KSTestD,KuiperTestV,Similarity,Likeness,CrossCorrelation)
+
+    return {"KSTestD":KSTestD,
+            "KuiperTestV": KuiperTestV,
+            "Similarity": Similarity,
+            "Likeness": Likeness,
+            "CrossCorrelation": CrossCorrelation
+            }

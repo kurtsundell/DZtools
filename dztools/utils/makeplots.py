@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from distributions import ecdf,pdp
+from ..stats.distributions import ecdf, pdp
 
 def makeplots(df,xmin,xmax,xint):
     
